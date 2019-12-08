@@ -53,6 +53,9 @@ import java.io.IOException;
  *
  * @see GenericServlet
  * @see javax.servlet.http.HttpServlet
+ *
+ * javaee的servlet
+ *
  */
 public interface Servlet {
 
@@ -84,6 +87,9 @@ public interface Servlet {
      *
      * @see UnavailableException
      * @see #getServletConfig
+     *
+     * 在servlet容器启动时，自动调用servlet的init有参方法
+     * 注意，有的servlet实现了该接口，并且写了一个自己的无参init方法，servlet容器在启动时并不会调用无参init方法
      */
     public void init(ServletConfig config) throws ServletException;
 
